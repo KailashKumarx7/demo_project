@@ -80,12 +80,11 @@ button{
     margin-top: 30px;
 }
 .card{
-    width: 200px;
-    height: 230px;
-    display: inline-block;
+    width: 002px;
+    height: 700px;
     border-radius: 10px;
-    box-sizing: border-box;
-    padding: 15px 25px;
+    display: inline;
+    padding: 100px 65px;
     cursor: pointer;
     background-position: center;
     margin: 10px 15px;
