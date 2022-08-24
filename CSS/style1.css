@@ -21,7 +21,7 @@
     justify-content: space-between;
 }
 .logo{
-    width: 50px;
+    width: 100px;
     cursor: pointer;
 }
 .menu-icon{
@@ -47,8 +47,10 @@ nav ul li a:hover{
     color: black;
 }
 .row{
-    display: flex;
-    height: 88%;
+    display: inline-flex;
+    width: 50%;
+    height: 50%;
+    padding-top: 240px;
     align-items: center;
 }
 .col{
@@ -80,8 +82,9 @@ button{
     margin-top: 30px;
 }
 .card{
-    width: 002px;
-    height: 700px;
+
+    max-width: 200px;
+    max-height: 700px;
     border-radius: 10px;
     display: inline;
     padding: 100px 65px;
@@ -90,8 +93,24 @@ button{
     margin: 10px 15px;
     background-size: cover;
     transition: transform 0.5s;
+    width: 100px;
+    height: 300px;
 }
-.card1{
+.card-i{
+    height: 164px;
+    margin: 15px;
+}
+.img-t{
+
+    height: 147px;
+    margin: 10px;
+    border-radius: 10px;
+}
+img .img-one{
+    height: 200px;
+    margin: 15px;
+}
+/* .card1{
     background-image: url(/images/2.jpg);
 }
 .card2{
@@ -103,6 +122,15 @@ button{
 .card4{
     background-image: url(/images/5.jpg);
 }
+.card4{
+    background-image: url(/images/6.jpg);
+}
+.card4{
+    background-image: url(/images/7.jpg);
+}
+.card4{
+    background-image: url(/images/8.jpg);
+} */
 .card:hover{
     transform: translateY(-10px);
 }

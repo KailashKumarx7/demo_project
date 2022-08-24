@@ -16,31 +16,88 @@
 
     <div class="container">
         <div class="navbar">
-            <img src="/images/1.jpg" class="logo">
+            <img src="/images/logo.png" class="logo">
             <nav>
                 <ul>
-                    <li><a href="#">HOME</a></li>
-                    <li><a href="#">REGION</a></li>
-                    <li><a href="#">ABOUT</a></li>
+                    <li><a href="#" >Home</li>
+                    <li><a href="#">Movies</a></li>
+                    <li><a href="#">About</a></li>
                 </ul>
             </nav>
-            <img src="/images/1.jpg" class="menu-icon">
+            <img src="/images/menu-i.png" class="menu-icon">
         </div>
-        <div class="row">
-            <div class="col">
+
+        <div class="row" style="width:100%;">
+            <div class="col"></div>
+            <div class="col slider demo" style="width:50%;">
+                <div style="height:200px; margin: 15px;">
+                    <img src="/images/2.jpg" style="height: 125px;width: 155px; border-radius: 10px;"/>
+                </div>
+                <div style="height:100px;margin: 15px;">
+                    <img src="/images/3.jpg" style="height: 125px;width: 155px; border-radius: 10px;"/>
+                </div>
+                <div style="height:100px;margin: 15px;">
+                    <img src="/images/4.jpg" style="height: 125px;width: 155px;border-radius: 10px;"/>
+                </div>
+                <div style="height:100px;margin: 15px;">
+                    <img src="/images/5.jpg " style="height: 125px;width: 155px;border-radius: 10px;"/>
+                </div>
+                <div style="height:100px;margin: 15px;">
+                    <img src="/images/6.jpg " style="height: 125px;width: 155px;border-radius: 10px;"/>
+                </div>
+                <div style="height:100px;margin: 15px;">
+                    <img src="/images/7.jpg " style="height: 125px; width: 155px;border-radius: 10px;"/>
+                </div>
+                <div style="height:100px;margin: 15px;">
+                    <img src="/images/8.jpg " style="height: 125px; width: 155px;border-radius: 10px;"/>
+                </div>
             </div>
-            <div class="slider demo">
-                <div> Slide  1 </div>
-                <div> Slide  2 </div>
-                <div> Slide  3 </div>
-              </div>
         </div>
-    </div>
     <script src="/assets/vendor/jquery/jquery.min.js"></script>
-<script src="/assets/vendor/slick/slick.js"></script>
+    <script src="/assets/vendor/slick/slick.js"></script>
 <script>
     $(document).ready(function(){
-  $('.demo').slick();
+  $('.demo').slick({
+//     dots: true,
+// //   slidesToShow: 2,
+//   slidesToShow: 2,
+//   slidesToScroll: 1,
+//   autoplay: true,
+//   autoplaySpeed: 2000,
+
+dots: true,
+//   infinite: false,
+  speed: 1500,
+  slidesToShow: 3,
+  slidesToScroll: 1,
+  autoplay: true,
+  autoplaySpeed: 2500,
+  responsive: [
+    {
+      breakpoint: 1024,
+      settings: {
+        slidesToShow: 3,
+        slidesToScroll: 3,
+        infinite: true,
+        dots: true
+      }
+    },
+    {
+      breakpoint: 600,
+      settings: {
+        slidesToShow: 2,
+        slidesToScroll: 2
+      }
+    },
+    {
+      breakpoint: 480,
+      settings: {
+        slidesToShow: 1,
+        slidesToScroll: 1
+      }
+    }
+  ]
+  });
 });
 
 
