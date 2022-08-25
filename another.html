@@ -8,6 +8,9 @@
   <link rel="stylesheet" href="/CSS/style1.css">
   <link rel="stylesheet" href="/assets/vendor/slick/slick.css">
   <link rel="stylesheet" href="/assets/vendor/slick/slick-theme.css">
+  <script src="/assets/vendor/jquery/jquery.min.js"></script>
+  <script src="/assets/vendor/slick/slick.js"></script>
+
 
   <title>Astral</title>
 </head>
@@ -54,15 +57,13 @@
         </div>
       </div>
     </div>
-    <script src="/assets/vendor/jquery/jquery.min.js"></script>
-    <script src="/assets/vendor/slick/slick.js"></script>
 
     <script>
 
       $(document).ready(function () {
 
 
-        
+
 
         // $(".img-one").click(function () {
         //   $(this).hide();
@@ -80,31 +81,27 @@
         // });
 
 
-          $('.preview').on('click' , function(){
-            var $value = $(this).attr('src');
-            console.log($value , $('#container1'));
-            $('#container1').attr('style','background-image:url('+$value+');');
-            // alert("this is cool");
+        $('.preview').on('click', function(){
+          var $value = $(this).attr('src');
+          // console.log($value, $('.container1'));
+          $('#container1').attr('style', 'background-image:url('+$value+');');
+        })
+
+        function updateAutoBackground(){
+          setTimeout(function(){
+            var $value = $($('.slick-active')[0]).find('.preview').attr('src');
+
+            $('#container1').attr('style', 'background-image: url('+$value+'); transition: 2.5s ease-in-out;');
+            updateAutoBackground();
           })
+        }
 
-          function updateAutoBackground()
-          {
-            setTimeout(function(){
-              var $value = $($('.slick-active')[0]).find('.preview').attr('src');
-              $('#container1').attr('style','background-image:url('+$value+');  transition: 2.5s ease-in-out;');
-              updateAutoBackground();
-            } , 1500);
-          }
+        updateAutoBackground();
 
-          updateAutoBackground();
+       
 
         $('.demo').slick({
-          //     dots: true,
-          // //   slidesToShow: 2,
-          //   slidesToShow: 2,
-          //   slidesToScroll: 1,
-          //   autoplay: true,
-          //   autoplaySpeed: 2000,
+         
 
           dots: true,
           //   infinite: false,
