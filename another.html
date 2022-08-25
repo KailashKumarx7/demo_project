@@ -32,25 +32,25 @@
       <div class="col"></div>
       <div class="col slider demo" style="width:50%;">
         <div style="height:200px; margin: 15px;">
-          <img class="img-one" src="/images/2.jpg" style="height: 125px;width: 155px; border-radius: 10px;" />
+          <img class="img-one preview" src="/images/2.jpg" style="height: 125px;width: 155px; border-radius: 10px;" />
         </div>
         <div style="height:100px;margin: 15px;">
-          <img class="img-one" src="/images/3.jpg" style="height: 125px;width: 155px; border-radius: 10px;" />
+          <img class="img-one preview" src="/images/3.jpg" style="height: 125px;width: 155px; border-radius: 10px;" />
         </div>
         <div style="height:100px;margin: 15px;">
-          <img class="img-one" src="/images/4.jpg" style="height: 125px;width: 155px;border-radius: 10px;" />
+          <img class="img-one preview" src="/images/4.jpg" style="height: 125px;width: 155px;border-radius: 10px;" />
         </div>
         <div style="height:100px;margin: 15px;">
-          <img class="img-one" src="/images/5.jpg " style="height: 125px;width: 155px;border-radius: 10px;" />
+          <img class="img-one preview" src="/images/5.jpg" style="height: 125px;width: 155px;border-radius: 10px;" />
         </div>
         <div style="height:100px;margin: 15px;">
-          <img class="img-one" src="/images/6.jpg " style="height: 125px;width: 155px;border-radius: 10px;" />
+          <img class="img-one preview" src="/images/6.jpg" style="height: 125px;width: 155px;border-radius: 10px;" />
         </div>
         <div style="height:100px;margin: 15px;">
-          <img class="img-one" src="/images/7.jpg " style="height: 125px; width: 155px;border-radius: 10px;" />
+          <img class="img-one preview" src="/images/7.jpg" style="height: 125px; width: 155px;border-radius: 10px;" />
         </div>
         <div style="height:100px;margin: 15px;">
-          <img class="img-one" src="/images/8.jpg " style="height: 125px; width: 155px;border-radius: 10px;" />
+          <img class="img-one preview" src="/images/8.jpg" style="height: 125px; width: 155px;border-radius: 10px;" />
         </div>
       </div>
     </div>
@@ -62,9 +62,11 @@
       $(document).ready(function () {
 
 
-        $(".img-one").click(function () {
-          $(this).hide();
-        });
+        
+
+        // $(".img-one").click(function () {
+        //   $(this).hide();
+        // });
 
         // $("#img-one").click(function () {
         //   $("#img-one").hide();
@@ -78,7 +80,12 @@
         // });
 
 
-
+          $('.preview').on('click' , function(){
+            var $value = $(this).attr('src');
+            console.log($value , $('#container1'));
+            $('#container1').attr('style','background-image:url('+$value+');');
+            // alert("this is cool");
+          })
 
         $('.demo').slick({
           //     dots: true,
